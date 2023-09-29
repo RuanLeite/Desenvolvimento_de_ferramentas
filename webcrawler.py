@@ -9,7 +9,7 @@ def start(url):
 
     soup = BeautifulSoup(source_code, "html.parser")
     
-    for each_text in soup.find_all("div", {"class": "entrey-content"}):
+    for each_text in soup.find_all("div", {"class": "entry-content"}):
         content = each_text.text
 
         words = content.lower().split()
@@ -49,3 +49,4 @@ def create_dictionary(clean_list):
     print(top)
 
 if __name__ == '__main__':
+    start("https://www.geeksforgeeks.org/python-programming-language/?ref=leftbar")
